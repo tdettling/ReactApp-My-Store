@@ -1,12 +1,12 @@
 import { Text, View } from 'react-native'
 import styles from '../../styles'
 
-const AddProduct = (props) => {
+const Category = (props) => {
     return (
         <Text>
-            Welcome to the AddProduct Screen!
+            Welcome to the Category Screen!
         </Text>
     );
 };
 
-export default AddProduct;
+export default Category;
