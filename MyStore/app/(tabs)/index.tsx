@@ -16,9 +16,13 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='ProductCategories'>
 
-          <Stack.Screen name = 'ProductCategories' component = {Category} />
+          <Stack.Screen 
+          name = 'ProductCategories' 
+          component = {Category} 
+          options = {{ title : 'Type of Products' }}/>
+
           <Stack.Screen name = 'Add' component = {AddProduct} />
           <Stack.Screen name = 'Edit' component = {EditProduct} />
           <Stack.Screen name = 'List' component = {ProductList} />

@@ -1,11 +1,23 @@
 import { Text, View } from 'react-native'
-import styles from '../../styles'
+import styles from '../styles'
+import { FlatList } from 'react-native-gesture-handler';
+
+const ItemTypes = ["Laptops", "Desktops", "Monitors", "Other Accessories/Cables"]
 
 const Category = (props) => {
     return (
-        <Text>
-            Welcome to the Category Screen!
-        </Text>
+        <FlatList
+                data = {ItemTypes}
+                keyExtractor={(category) => category}
+                renderItem={() => {
+
+                    return (
+                        <Text> {element.item} </Text>
+                    )
+                }}>
+
+
+        </FlatList>
     );
 };
 
